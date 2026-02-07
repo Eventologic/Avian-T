@@ -125,7 +125,7 @@ const imageUrl = computed(() => {
           </div>
 
           <IconButton
-            title="edit group"
+            title="Edit group"
             v-if="['group', 'broadcast'].includes(conversation.type)"
             class="ic-btn-ghost-primary w-7 h-7"
             @click="
@@ -163,7 +163,7 @@ const imageUrl = computed(() => {
       >
         <IconAndText
           :icon="UserIcon"
-          title="members"
+          title="Members"
           link
           chevron
           @click="
@@ -177,14 +177,14 @@ const imageUrl = computed(() => {
 
       <!--(both) notifications-->
       <div class="px-5 flex items-center">
-        <IconAndText :icon="BellIcon" title="notifications" switch />
+        <IconAndText :icon="BellIcon" title="Notifications" switch />
       </div>
 
       <!--(both) shared media-->
       <div class="px-5 pt-5 flex items-center">
         <IconAndText
           :icon="ShareIcon"
-          title="shared media"
+          title="Shared media"
           link
           chevron
           @click="
@@ -204,7 +204,7 @@ const imageUrl = computed(() => {
         v-if="conversation.type === 'couple' || props.contact"
         class="px-5 pt-5 group"
       >
-        <IconAndText :icon="NoSymbolIcon" title="block contact" link />
+        <IconAndText :icon="NoSymbolIcon" title="Block contact" link />
       </div>
 
       <!--(contact) delete contact-->
@@ -212,7 +212,7 @@ const imageUrl = computed(() => {
         v-if="conversation.type === 'couple' || props.contact"
         class="px-5 pt-5 group"
       >
-        <IconAndText :icon="TrashIcon" title="delete contact" link />
+        <IconAndText :icon="TrashIcon" title="Delete contact" link />
       </div>
 
       <!--(group) exit group-->
@@ -222,7 +222,7 @@ const imageUrl = computed(() => {
         "
         class="px-5 pt-5 flex items-center group"
       >
-        <IconAndText :icon="ArrowLeftOnRectangleIcon" title="exit group" link />
+        <IconAndText :icon="ArrowLeftOnRectangleIcon" title="Exit group" link />
       </div>
     </div>
 

@@ -32,7 +32,7 @@ const store = useStore();
   <Collapse id="notifications-settings-collapse" :collapsed="props.collapsed">
     <SettingsSwitch
       title="Allow Notifications"
-      description="Receive Notifications from avian"
+      description="Receive notifications from c1phera"
       :value="!!store.settings.allowNotifications"
       :handle-toggle-switch="
         (value) => (store.settings.allowNotifications = value)

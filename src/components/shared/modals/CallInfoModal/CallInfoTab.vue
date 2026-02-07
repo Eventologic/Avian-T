@@ -63,7 +63,7 @@ const CallStatusIcon = computed(() => {
       <div class="px-5 flex items-center">
         <IconAndText
           :icon="UserGroupIcon"
-          title="members"
+          title="Members"
           link
           chevron
           @click="

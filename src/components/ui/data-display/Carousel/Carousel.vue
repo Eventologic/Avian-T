@@ -258,7 +258,7 @@ onUnmounted(() => {
           >
             <!--Left controls-->
             <IconButton
-              title="previous"
+              title="Previous"
               aria-label="previous item"
               @click="handleMoveToPreviousItem"
               :class="{ hidden: !isThereAPrevious() }"
@@ -300,7 +300,7 @@ onUnmounted(() => {
 
             <!--right controls-->
             <IconButton
-              title="next"
+              title="Next"
               aria-label="next item"
               @click="handleMoveToNextItem"
               :class="{ hidden: !isThereANext() }"
