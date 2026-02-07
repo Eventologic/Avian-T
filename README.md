@@ -43,6 +43,22 @@ npm run dev
 <br/>
 <br/>
 
+## RTC Backend (Node/Express) 📞
+
+This repo includes a lightweight WebRTC signaling backend under `backend/` for voice/video calls with JWT auth.
+
+```bash
+cd backend
+npm install
+cp .env.example .env
+npm run dev
+```
+
+See `backend/README.md` for configuration, WebSocket usage, and encryption notes.
+
+<br/>
+<br/>
+
 ## Resources 📙
 
 <p>The resources used to create this project are:</p>
