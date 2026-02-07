@@ -149,7 +149,7 @@ const handleReplyToMessage = () => {
     <button
       class="dropdown-link dropdown-link-danger"
       role="menuitem"
-      aria-label="delete this message"
+      aria-label="Delete this message"
       @click="handleCloseContextMenu"
     >
       <TrashIcon class="h-5 w-5 mr-3" />

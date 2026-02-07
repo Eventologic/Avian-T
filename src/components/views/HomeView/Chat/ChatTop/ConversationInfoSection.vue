@@ -76,8 +76,8 @@ const handleOpenVoiceCallModal = () => {
       <IconButton
         class="ic-btn-ghost-primary w-7 h-7"
         @click="handleCloseConversation"
-        title="close conversation"
-        aria-label="close conversation"
+        title="Close conversation"
+        aria-label="Close conversation"
       >
         <ChevronLeftIcon class="w-[1.25rem] h-[1.25rem]" />
       </IconButton>
@@ -121,8 +121,8 @@ const handleOpenVoiceCallModal = () => {
     <div class="flex" :class="{ hidden: store.status === 'loading' }">
       <!--search button-->
       <IconButton
-        title="search messages"
-        aria-label="search messages"
+        title="Search messages"
+        aria-label="Search messages"
         @click="props.handleOpenSearch"
         class="ic-btn-ghost-primary w-7 h-7 mr-3"
       >
@@ -140,8 +140,8 @@ const handleOpenVoiceCallModal = () => {
           :aria-expanded="showDropdown"
           tabindex="0"
           aria-controls="conversation-menu"
-          title="toggle conversation menu"
-          aria-label="toggle conversation menu"
+          title="Toggle conversation menu"
+          aria-label="Toggle conversation menu"
         >
           <EllipsisVerticalIcon class="open-top-menu w-[1.25rem] h-[1.25rem]" />
         </IconButton>

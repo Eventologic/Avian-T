@@ -52,10 +52,10 @@ const props = defineProps<{
 
     <!--action buttons-->
     <div class="flex">
-      <IconButton class="ic-btn-ghost-primary w-7 h-7 mr-2" title="replace">
+      <IconButton class="ic-btn-ghost-primary w-7 h-7 mr-2" title="Replace">
         <ArrowPathRoundedSquareIcon class="w-[.9375rem] h-[.9375rem]" />
       </IconButton>
-      <IconButton class="ic-btn-ghost-danger w-7 h-7" title="delete">
+      <IconButton class="ic-btn-ghost-danger w-7 h-7" title="Delete">
         <TrashIcon class="w-[.9375rem] h-[.9375rem]" />
       </IconButton>
     </div>

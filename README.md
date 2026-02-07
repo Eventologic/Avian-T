@@ -43,6 +43,36 @@ npm run dev
 <br/>
 <br/>
 
+## RTC Backend (Node/Express) 📞
+
+This repo includes a lightweight WebRTC signaling backend under `backend/` for voice/video calls with JWT auth.
+
+```bash
+cd backend
+npm install
+cp .env.example .env
+npm run dev
+```
+
+See `backend/README.md` for configuration, WebSocket usage, and encryption notes.
+
+<br/>
+<br/>
+
+### Frontend RTC wiring
+
+The voice call modal now opens a WebSocket signaling session when a call is active. Configure the frontend with:
+
+```bash
+VITE_RTC_WS_URL=ws://localhost:8080/ws
+VITE_RTC_DEV_TOKEN_ENDPOINT=http://localhost:8080/api/token
+```
+
+If you already have JWTs issued elsewhere, set `VITE_RTC_TOKEN` instead of the dev token endpoint.
+
+<br/>
+<br/>
+
 ## Resources 📙
 
 <p>The resources used to create this project are:</p>

@@ -45,7 +45,7 @@ const changeActiveSection = (event: {
           class="w-5.5 h-4.5 mb-5 opacity-70"
         />
         <p class="heading-2 text-black/70 dark:text-white/70 mb-4">
-          Get started with Avian
+          Get started with c1phera
         </p>
         <p class="body-3 text-black/75 dark:text-white/70 font-light">
           Sign in to start using messaging!

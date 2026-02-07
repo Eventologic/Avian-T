@@ -19,9 +19,9 @@ const props = defineProps<{
   <div class="w-full flex justify-end mb-5">
     <!--decrease zoom-->
     <IconButton
-      title="decrease zoom"
+      title="Decrease zoom"
       v-show="props.isImage"
-      aria-label="decrease zoom"
+      aria-label="Decrease zoom"
       class="mr-5"
       @click="props.handleDecreaseZoom()"
     >
@@ -32,9 +32,9 @@ const props = defineProps<{
 
     <!--increase zoom-->
     <IconButton
-      title="increase zoom"
+      title="Increase zoom"
       v-show="props.isImage"
-      aria-label="increase zoom"
+      aria-label="Increase zoom"
       class="mr-5"
       @click="props.handleIncreaseZoom()"
     >
@@ -45,17 +45,17 @@ const props = defineProps<{
 
     <!--delete media-->
     <IconButton
-      aria-label="delete attachment"
+      aria-label="Delete attachment"
       class="mr-5"
-      title="delete attachment"
+      title="Delete attachment"
     >
       <TrashIcon class="w-6 h-6 text-white opacity-80 hover:opacity-100" />
     </IconButton>
 
     <!--close carousel-->
     <IconButton
-      title="close carousel"
-      aria-label="close carousel"
+      title="Close carousel"
+      aria-label="Close carousel"
       @click="props.handleCloseCarousel()"
     >
       <XMarkIcon class="w-6 h-6 text-white opacity-80 hover:opacity-100" />

@@ -80,7 +80,7 @@ onMounted(() => {
           class="ic-btn-ghost-primary w-7 h-7"
           @click="composeOpen = true"
           aria-label="compose conversation"
-          title="compose conversation"
+          title="Compose conversation"
         >
           <PencilSquareIcon class="w-[1.25rem] h-[1.25rem]" />
         </IconButton>

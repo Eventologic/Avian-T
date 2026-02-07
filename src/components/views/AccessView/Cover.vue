@@ -20,7 +20,7 @@ import blurPath from "@src/assets/images/blur.png";
           <span class="text-gradient">web.</span>
         </p>
         <p class="body-3 text-white">
-          Avian saves all the data in user’s devices and uses a cryptographic
+          c1phera saves all the data in user’s devices and uses a cryptographic
           protocols to sync the data across multiple browsers and devices.
         </p>
       </div>

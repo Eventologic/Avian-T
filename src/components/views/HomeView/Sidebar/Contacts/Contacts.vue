@@ -66,7 +66,7 @@ watch(searchText, () => {
         <IconButton
           @click="openModal = true"
           class="ic-btn-ghost-primary w-7 h-7"
-          title="add contacts"
+          title="Add contacts"
           aria-label="add contacts"
         >
           <UserPlusIcon class="w-[1.25rem] h-[1.25rem]" />
