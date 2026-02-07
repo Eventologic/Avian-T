@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, onBeforeUnmount, ref, watch } from "vue";
 
 import useStore from "@src/store/store";
 import { getOtherMembers } from "@src/utils";
+import rtcClient from "@src/services/rtcClient";
 
 import IncomingTab from "@src/components/shared/modals/VoiceCallModal/IncomingTab.vue";
 import OngoingTab from "@src/components/shared/modals/VoiceCallModal/OngoingTab.vue";
@@ -45,6 +46,56 @@ const handleCallStatusChange = (status: string) => {
     store.activeCall.status = status;
   }
 };
+
+const getRoomId = () => {
+  const activeCall = store.activeCall as { id?: number } | undefined;
+  if (!activeCall) return null;
+  if (typeof activeCall.id === "number") return `call-${activeCall.id}`;
+
+  const memberIds = activeCall.members?.map((member) => member.id).join("-");
+  return memberIds ? `call-${memberIds}` : null;
+};
+
+const connectRtc = async () => {
+  if (!store.user || !store.activeCall) return;
+
+  await rtcClient.connect({
+    userId: String(store.user.id),
+    name: `${store.user.firstName ?? ""} ${store.user.lastName ?? ""}`.trim(),
+  });
+
+  const roomId = getRoomId();
+  if (roomId) {
+    await rtcClient.joinRoom(roomId);
+  }
+};
+
+watch(
+  () => props.open,
+  async (open) => {
+    if (open) {
+      await connectRtc();
+      return;
+    }
+
+    await rtcClient.disconnect();
+  }
+);
+
+watch(
+  () => store.activeCall,
+  async (call, prevCall) => {
+    if (!props.open) return;
+    if (call?.id !== prevCall?.id) {
+      await rtcClient.disconnect();
+      await connectRtc();
+    }
+  }
+);
+
+onBeforeUnmount(async () => {
+  await rtcClient.disconnect();
+});
 </script>
 
 <template>
